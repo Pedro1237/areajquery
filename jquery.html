@@ -1,150 +1,76 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
-  <title>Calculadora de Áreas</title>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <script>
-
-    $(document).ready(function() {
-
-      function calcularAreaLosango() {
-
-        var diagonalMaior = parseFloat($("#diagonalMaior").val());
-
-        var diagonalMenor = parseFloat($("#diagonalMenor").val());
-
-        var area = (diagonalMaior * diagonalMenor) / 2;
-
-        console.log("A área do losango é:", area);
-
-        $("#resultadoLosango").text("A área do losango é: " + area);
-
-      }
-
-      function calcularAreaParalelogramo() {
-
-        var base = parseFloat($("#base").val());
-
-        var altura = parseFloat($("#altura").val());
-
-        var area = base * altura;
-
-        console.log("A área do paralelogramo é:", area);
-
-        $("#resultadoParalelogramo").text("A área do paralelogramo é: " + area);
-
-      }
-
-      function calcularAreaTrapezio() {
-
-        var baseMenor = parseFloat($("#baseMenor").val());
-
-        var baseMaior = parseFloat($("#baseMaior").val());
-
-        var altura = parseFloat($("#altura").val());
-
-        var area = (baseMenor + baseMaior) / 2 * altura;
-
-        console.log("A área do trapézio é:", area);
-
-        $("#resultadoTrapezio").text("A área do trapézio é: " + area);
-
-      }
-
-      $("#calcularLosango").click(function() {
-
-        calcularAreaLosango();
-
-      });
-
-      $("#calcularParalelogramo").click(function() {
-
-        calcularAreaParalelogramo();
-
-      });
-
-      $("#calcularTrapezio").click(function() {
-
-        calcularAreaTrapezio();
-
-      });
-
-    });
-
-  </script>
-
+<title>Calculadora de Áreas</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+<script>
+$(document).ready(function() {
+function calcularAreaLosango() {
+var diagonalMaior = parseFloat($("#diagonalMaior").val());
+var diagonalMenor = parseFloat($("#diagonalMenor").val());
+var area = (diagonalMaior * diagonalMenor) / 2;
+console.log("A área do losango é:", area);
+$("#resultadoLosango").text("A área do losango é: " + area);
+}
+function calcularAreaParalelogramo() {
+var base = parseFloat($("#base").val());
+var altura = parseFloat($("#altura").val());
+var area = base * altura;
+console.log("A área do paralelogramo é:", area);
+$("#resultadoParalelogramo").text("A área do paralelogramo é: " + area);
+}
+function calcularAreaTrapezio() {
+var baseMenor = parseFloat($("#baseMenor").val());
+var baseMaior = parseFloat($("#baseMaior").val());
+var altura = parseFloat($("#altura").val());
+var area = (baseMenor + baseMaior) / 2 * altura;
+console.log("A área do trapézio é:", area);
+$("#resultadoTrapezio").text("A área do trapézio é: " + area);
+}
+$("#calcularLosango").click(function() {
+calcularAreaLosango();
+});
+$("#calcularParalelogramo").click(function() {
+calcularAreaParalelogramo();
+});
+$("#calcularTrapezio").click(function() {
+calcularAreaTrapezio();
+});
+});
+</script>
 </head>
-
 <body>
-
-  <h1>Calculadora de Áreas</h1>
-
-  <h2>Losango</h2>
-
-  <label for="diagonalMaior">Diagonal Maior:</label>
-
-  <input type="number" id="diagonalMaior">
-
-  <br>
-
-  <label for="diagonalMenor">Diagonal Menor:</label>
-
-  <input type="number" id="diagonalMenor">
-
-  <br>
-
-  <button id="calcularLosango">Calcular</button>
-
-  <p id="resultadoLosango"></p>
-
-  <h2>Paralelogramo</h2>
-
-  <label for="base">Base:</label>
-
-  <input type="number" id="base">
-
-  <br>
-
-  <label for="altura">Altura:</label>
-
-  <input type="number" id="altura">
-
-  <br>
-
-  <button id="calcularParalelogramo">Calcular</button>
-
-  <p id="resultadoParalelogramo"></p>
-
-  <h2>Trapezio</h2>
-
-  <label for="baseMenor">Base Menor:</label>
-
-  <input type="number" id="baseMenor">
-
-  <br>
-
-  <label for="baseMaior">Base Maior:</label>
-
-  <input type="number" id="baseMaior">
-
-  <br>
-
-  <label for="altura">Altura:</label>
-
-  <input type="number" id="altura">
-
-  <br>
-
-  <button id="calcularTrapezio">Calcular</button>
-
-  <p id="resultadoTrapezio"></p>
-
+<h1>Calculadora de Áreas</h1>
+<h2>Losango</h2>
+<label for="diagonalMaior">Diagonal Maior:</label>
+<input type="number" id="diagonalMaior">
+<br>
+<label for="diagonalMenor">Diagonal Menor:</label>
+<input type="number" id="diagonalMenor">
+<br>
+<button id="calcularLosango">Calcular</button>
+<p id="resultadoLosango"></p>
+<h2>Paralelogramo</h2>
+<label for="base">Base:</label>
+<input type="number" id="base">
+<br>
+<label for="altura">Altura:</label>
+<input type="number" id="altura">
+<br>
+<button id="calcularParalelogramo">Calcular</button>
+<p id="resultadoParalelogramo"></p>
+<h2>Trapezio</h2>
+<label for="baseMenor">Base Menor:</label>
+<input type="number" id="baseMenor">
+<br>
+<label for="baseMaior">Base Maior:</label>
+<input type="number" id="baseMaior">
+<br>
+<label for="altura">Altura:</label>
+<input type="number" id="altura">
+<br>
+<button id="calcularTrapezio">Calcular</button>
+<p id="resultadoTrapezio"></p>
 </body>
-
 </html>
-
